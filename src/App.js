@@ -1,6 +1,4 @@
 import { PDFDownloadLink, ReactPDF, PDFViewer } from "@react-pdf/renderer";
-import PDFFile from "./components/PDFFile";
-import { MyDocument } from "./components/MyDocument";
 import BasicDocument from "./components/BasicDocument";
 
 function App() {
