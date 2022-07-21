@@ -9,10 +9,6 @@ import LighthouseImage from "../photos/lighthouse.jpg";
       orientation:"portrait",
       backgroundSize: "cover",
     },
-    section: {
-      margin: 10,
-      padding: 10,
-    },
     viewer: {
       width: window.innerWidth, //the pdf viewer will take up all of the width and height
       height: window.innerHeight,
