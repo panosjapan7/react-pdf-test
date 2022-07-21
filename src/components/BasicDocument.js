@@ -19,6 +19,8 @@ import LighthouseImage from "../photos/lighthouse.jpg";
     },
     parentDiv: {
         position: "relative",
+        objectFit: "cover",
+
     },
     image: {
         width: "100%",
