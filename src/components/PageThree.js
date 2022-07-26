@@ -82,7 +82,7 @@ import LighthouseImage from "../photos/lighthouse.jpg";
 
       fontSize: "40px",
       letterSpacing: "5px",
-      fontFamily: "Helvetica-Bold",
+      fontFamily: "Helvetica-Bold", // fontWeight doesn't work unless you register a font that supports various weights (check documentation)
     },
     smallHeadlineText: {
       color: "white",
@@ -246,6 +246,7 @@ import LighthouseImage from "../photos/lighthouse.jpg";
       pageTwoImage: {
         zIndex: 1,
       }
+
   })
 
   const stylesThree = StyleSheet.create({
@@ -417,6 +418,84 @@ import LighthouseImage from "../photos/lighthouse.jpg";
       <PDFViewer style={styles.viewer}>
         {/* Start of the document*/}
         <Document>
+
+          {/*Page One*/}
+          <Page size="A4" style={styles.page} object-fit="fill">
+
+            {/* Container Div */}
+            <View style={styles.parentDiv}>
+              
+              {/* Image */}
+              <View style={styles.imageDiv}>
+                <Image
+                        style={styles.image}
+                        // src="https://images.unsplash.com/photo-1615839476209-46309694d733"
+                        src="https://images.unsplash.com/photo-1615839476209-46309694d733?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2021&q=80"
+                    /> 
+              </View>
+              
+              {/* Top Horizontal Line */}
+              <View style={styles.horizontalLineTop}></View>
+              
+              {/* Company Text at Top */}
+              <Text style={styles.companyTextTop}>FÖRETAG</Text>
+              
+              {/* Center Text */}
+              <Text style={styles.headlineText}>ÅRSTID ÅR</Text>
+              <Text style={styles.smallHeadlineText}>VÄLMÅENDEINDEX ANALYS</Text>
+              
+              {/* Bottom Text */}
+              <View style={styles.bottomInfoDiv}>
+                <Text style={styles.bottomInfo}>www.dearchange.se</Text>
+                <Text style={styles.bottomInfo}>info@dearchange.se</Text>
+                <Text style={styles.bottomInfo}>Dagens datum</Text>
+              </View >
+
+              {/* Bottom Horizontal Line */}
+              <View style={styles.horizontalLineBottom}></View>
+            
+            </View> 
+            {/* End of Container Div */}
+
+          </Page>
+          
+          {/*Page Two*/}
+          <Page size="A4" style={stylesTwo.page} object-fit="fill">
+            <View style={stylesTwo.pageTwoParentDiv}>
+              <Text style={stylesTwo.pageTwoHeadlineText}>ANALYS ÅRSTID ÅR</Text>
+
+              <View style={stylesTwo.pageTwoHorizontalLine}></View>
+            </View>
+
+            <View style={stylesTwo.pageTwoTextParentDiv}>
+              <View style={stylesTwo.pageTwoTextColumn}>
+                <Text style={stylesTwo.pageTwoParagraphs}>Ert välmåendeindex i den här mätningen är XX. Snittet för våra företagskunder är 6,6.</Text>
+                <Text style={stylesTwo.pageTwoParagraphs}>Personlig utveckling har ett index på XX. XX procent av medarbetarna upplever att de är mycket engagerade, motiverade, inspirerade och tycker om att lära sig nya saker. X av 10 uppger dock en viss bristande motivation där de framförallt upplever att det är svårt att förändra eller påverka sina omständigheter.</Text>
+                <Text style={stylesTwo.pageTwoParagraphs}>Fysisk aktivitet ligger på XX. XX procent uppger att de rör sig på en hälsosam nivå. XX procent är så inaktiva att det finns risk för den fysiska och psykiska hälsan.</Text>
+              </View>
+
+              <View style={stylesTwo.pageTwoTextColumn}>
+                <Text style={stylesTwo.pageTwoParagraphs}>Stressnivån ligger på XX, XX procent upplever en viss förhöjd stress. Frågor som sticker ut är; XX, XX samt XX.</Text>
+              </View>
+            </View>
+            
+            <View style={stylesTwo.pageTwoCircleContainer}>
+              <View style={stylesTwo.pageTwoCircleDiv}>
+                <Text style={stylesTwo.pageTwoCircleHeadline}>X av 10</Text>
+                <Text style={stylesTwo.pageTwoCircleText}>KÄNNER</Text>
+                <Text style={stylesTwo.pageTwoCircleText}>MENINGSFULLHET</Text>
+              </View>
+            </View>  
+
+            <View style={stylesTwo.pageTwoImageContainer}>
+              <Image
+                style={stylesTwo.pageTwoImage}
+                src="https://www.groovypost.com/wp-content/uploads/2018/02/happy-man-laptop-feature.jpg"
+              />
+              <Text style={stylesTwo.pageTwoImageText}>Mår vi bra, gör vi bra</Text>
+            </View>
+
+          </Page>
           
           {/*Page Three*/}
           <Page size="A4" style={stylesThree.page} object-fit="fill">
