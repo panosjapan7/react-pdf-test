@@ -1,4 +1,4 @@
-import { Document, Page, Text, View, StyleSheet, PDFViewer, Image } from "@react-pdf/renderer";
+import { Document, Page, Text, View, StyleSheet, PDFViewer, Image, Svg, Circle, Rect } from "@react-pdf/renderer";
 import LighthouseImage from "../photos/lighthouse.jpg";
 
   // Create styles
@@ -248,6 +248,169 @@ import LighthouseImage from "../photos/lighthouse.jpg";
       }
 
   })
+
+  const stylesThree = StyleSheet.create({
+    page: {
+      backgroundColor: "white",
+      width:"100%",
+      height: "100vh",
+      orientation:"portrait",
+      backgroundSize: "cover",
+      
+      // Makes its children be at the center
+      // alignItems: "center", 
+      position: "relative",
+    },
+      pageThreeMainContainer:{
+        width: "100%",
+        height: "100%",
+        
+        display: "flex",
+        flexDirection: "column",
+        // alignItems: "center",
+        position: "relative",
+        paddingLeft: "40px",
+        paddingRight: "40px",
+        
+        // border: "5px",
+        // borderColor: "red",
+        // borderStyle: "solid",
+        // borderWidth: "3px",
+      },
+        pageThreeHorizontalLine: {
+          // position: "absolute",
+          // top: 35,
+          textAlign: "center",
+          marginTop: "35px",
+
+          width: "500px",
+          borderBottom: "3px",
+          borderBottomColor: "#068466",
+          borderBottomStyle: "solid",
+          borderBottomWidth: "3px",
+        },
+        pageThreeAgeTextParentContainer: {
+          marginTop: "20px",
+        },
+          pageThreeAgeTextStatistic: {
+            fontSize: "10px",
+            fontFamily: "Times-Bold",
+            letterSpacing: "1px",
+
+            marginBottom: "30px",
+          },
+          pageThreeAgeTextHeadline: {
+            marginBottom: "5px",
+            fontFamily: "Helvetica", 
+            fontSize: "12px",
+          },
+          pageThreeAgeText: {
+            fontSize: "12px",
+            fontFamily: "Times-Roman",
+            marginTop: "10px",
+            marginBottom: "30px",
+          },
+          pageAgeRange: {
+            marginBottom: "4px",
+            fontFamily: "Helvetica", 
+            fontSize: "11px",
+            
+            marginTop: "0px",
+          },
+          pageThreeAgeTextLastLineOne: {
+            fontSize: "12px",
+            fontFamily: "Times-Roman",
+            marginTop: "5px",
+            marginBottom: "40px",
+          },
+          pageThreeAgeTextLastLineTwo: {
+            fontSize: "12px",
+            fontFamily: "Times-Roman",
+            marginTop: "5px",
+          },
+        
+        pageThreeChartContainer: {
+          marginTop: "30px",
+          display: "flex",
+          flexDirection: "row",
+        },
+        pageThreeChartTextContainer: {
+          display: "flex",
+          alignItems: "flex-end",
+          marginLeft: "0px",
+          textAlign: "left",
+        },
+          pageThreeChartText: {
+            fontFamily: "Helvetica", 
+            fontSize: "7px",
+            // marginLeft: "20px",
+            marginBottom: "13px",
+          },
+          pageThreeChartTextPersonlig: {
+            fontFamily: "Helvetica", 
+            fontSize: "7px",
+            paddingRight: "8px",
+          },
+        pageThreeCharts: {
+          // paddingLeft: "3px",
+          marginLeft: "10px",
+        },
+          pageThreeSvg: {
+            paddingBottom: "0px",
+            marginBottom: "0px",
+          },
+
+          pageThreeAgeTextParentContainerTwo: {
+            marginTop: "-120px",
+            marginBottom: "30px",
+          },
+      
+        pageThreeThreeCirclesContainer: {
+          marginBottom: "20px",
+          height: "320px",
+          position: "relative",
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "space-between",
+        },
+          pageThreeCircle: {
+            backgroundColor: "#068466",
+            width: "150px",
+            height: "150px",
+
+            borderRadius: "50%",
+            bottom: 70,
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+        },
+        pageThreeCircleHeadline: {
+          fontSize: "27px",
+          fontFamily: "Helvetica-Bold",
+          color: "white",
+          marginBottom: "5px",
+        },
+        pageThreeCircleText: {
+          fontSize: "10px",
+          fontFamily: "Helvetica",
+          color: "white",
+          width: "120px",
+          textAlign: "center",
+          lineHeight: "1.2px",
+        },
+        pageThreeCircleTextSecond: {
+          fontSize: "10px",
+          fontFamily: "Helvetica",
+          color: "white",
+          width: "150px",
+          textAlign: "center",
+          lineHeight: "1px",
+          marginTop: "1.5px",
+          marginRight: "0px",
+          marginLeft: "0px",
+        },
+  })
   
   // Create Document Component
   function BasicDocument() {
@@ -255,7 +418,7 @@ import LighthouseImage from "../photos/lighthouse.jpg";
       <PDFViewer style={styles.viewer}>
         {/* Start of the document*/}
         <Document>
-            
+
           {/*Page One*/}
           <Page size="A4" style={styles.page} object-fit="fill">
 
@@ -332,6 +495,177 @@ import LighthouseImage from "../photos/lighthouse.jpg";
               <Text style={stylesTwo.pageTwoImageText}>Mår vi bra, gör vi bra</Text>
             </View>
 
+          </Page>
+          
+          {/*Page Three*/}
+          <Page size="A4" style={stylesThree.page} object-fit="fill">
+            <View style={stylesThree.pageThreeMainContainer}>
+              
+              {/* Top Horizontal Line */}
+              <View style={stylesThree.pageThreeHorizontalLine}></View>
+
+              {/* First Text Paragraph */}
+              <View style={stylesThree.pageThreeAgeTextParentContainer}>
+                <Text style={stylesThree.pageThreeAgeTextStatistic}>STATISTIK</Text>
+                <Text style={stylesThree.pageThreeAgeTextHeadline}>ÅLDER</Text>
+                <Text style={stylesThree.pageThreeAgeText}>Här redovisas de ålderspann som har fler än 5 svarande.</Text>
+                <Text style={stylesThree.pageAgeRange}>20-39 ÅR</Text>
+                <Text style={stylesThree.pageThreeAgeText}>Välmåendeindex ligger på XX. XX procent känner sig mycket engagerade och kreativa. Den största utmaningen för denna åldersgrupp är XX.</Text>
+
+                <Text style={stylesThree.pageThreeAgeTextLastLineOne}>Det som skiljer sig från övriga åldersgrupper är XX.</Text>
+              </View>
+              {/* End of First Text Paragraph */}
+
+              {/* First Chart */}
+              <View style={stylesThree.pageThreeChartContainer}>
+                <View style={stylesThree.pageThreeChartTextContainer}>
+                  <Text style={stylesThree.pageThreeChartText}>Stresshantering</Text>
+                  <Text style={stylesThree.pageThreeChartText}>Fysisk aktivitet</Text>
+                  <Text style={stylesThree.pageThreeChartTextPersonlig}>Personlig utveckling</Text>
+                </View>
+                
+                <View style={stylesThree.pageThreeCharts}>
+                  
+                  <Svg viewBox="0 0 0 0" style={stylesThree.pageThreeSvg}>
+                      <Rect
+                        x="0"
+                        y="0"
+                        width="250"
+                        height="10"
+                        fill="#38c976"
+                        fillOpacity="0.2"
+                      />
+                      <Rect
+                        x="0"
+                        y="0"
+                        width={"150"}
+                        height="10"
+                        fill="#41aa88"
+                      />
+                      <Rect
+                        x="0"
+                        y="20"
+                        width="250"
+                        height="10"
+                        fill="#38c976"
+                        fillOpacity="0.2"
+                      />
+                      <Rect
+                        x="0"
+                        y="20"
+                        width={"100"}
+                        height="10"
+                        fill="#41aa88"
+                      />
+                      <Rect
+                        x="0"
+                        y="40"
+                        width="250"
+                        height="10"
+                        fill="#38c976"
+                        fillOpacity="0.2"
+                      />
+                      <Rect
+                        x="0"
+                        y="40"
+                        width={"50"}
+                        height="10"
+                        fill="#41aa88"
+                      />
+                  </Svg>
+                </View>
+
+              </View>
+
+
+              {/* Second Text Paragraph */}
+              <View style={stylesThree.pageThreeAgeTextParentContainerTwo}>
+                <Text style={stylesThree.pageAgeRange}>40-59 ÅR</Text>
+                <Text style={stylesThree.pageThreeAgeText}>Välmåendeindex XX. XX procent upplever livet som mycket meningsfullt.</Text>
+
+                <Text style={stylesThree.pageThreeAgeTextLastLineTwo}>Det som sticker ut i jämförelsen är XX och XX.</Text>
+              </View>
+              {/* End of Second Text Paragraph */}
+
+              {/* Second Chart */}
+              <View style={stylesThree.pageThreeChartContainer}>
+                <View style={stylesThree.pageThreeChartTextContainer}>
+                  <Text style={stylesThree.pageThreeChartText}>Stresshantering</Text>
+                  <Text style={stylesThree.pageThreeChartText}>Fysisk aktivitet</Text>
+                  <Text style={stylesThree.pageThreeChartTextPersonlig}>Personlig utveckling</Text>
+                </View>
+                
+                <View style={stylesThree.pageThreeCharts}>
+                  
+                  <Svg viewBox="0 0 0 0" style={stylesThree.pageThreeSvg}>
+                      <Rect
+                        x="0"
+                        y="0"
+                        width="250"
+                        height="10"
+                        fill="#38c976"
+                        fillOpacity="0.2"
+                      />
+                      <Rect
+                        x="0"
+                        y="0"
+                        width={"150"}
+                        height="10"
+                        fill="#41aa88"
+                      />
+                      <Rect
+                        x="0"
+                        y="20"
+                        width="250"
+                        height="10"
+                        fill="#38c976"
+                        fillOpacity="0.2"
+                      />
+                      <Rect
+                        x="0"
+                        y="20"
+                        width={"100"}
+                        height="10"
+                        fill="#41aa88"
+                      />
+                      <Rect
+                        x="0"
+                        y="40"
+                        width="250"
+                        height="10"
+                        fill="#38c976"
+                        fillOpacity="0.2"
+                      />
+                      <Rect
+                        x="0"
+                        y="40"
+                        width={"50"}
+                        height="10"
+                        fill="#41aa88"
+                      />
+                  </Svg>
+                </View>
+
+              </View>
+
+              {/* Three Circles */}
+              <View style={stylesThree.pageThreeThreeCirclesContainer}>
+                <View style={stylesThree.pageThreeCircle}>
+                  <Text style={stylesThree.pageThreeCircleHeadline}>48%</Text>
+                  <Text style={stylesThree.pageThreeCircleText}>AV 40-59 ÅRINGARNA HAR EN AKTIV LIVSSTIL</Text>
+                </View>
+                <View style={stylesThree.pageThreeCircle}>
+                  <Text style={stylesThree.pageThreeCircleHeadline}>28%</Text>
+                  <Text style={stylesThree.pageThreeCircleText}>AV 20-39 ÅRINGARNA</Text>
+                  <Text style={stylesThree.pageThreeCircleTextSecond}>KÄNNER MENINGSFULLHET</Text>
+                </View>
+                <View style={stylesThree.pageThreeCircle}>
+                  <Text style={stylesThree.pageThreeCircleHeadline}>48%</Text>
+                  <Text style={stylesThree.pageThreeCircleText}>AV 40-59 ÅRINGARNA KÄNNER HARMONI</Text>
+                </View>
+              </View>
+            </View>
+            {/* End of pageThreeMainContainer */}
           </Page>
         </Document>
       </PDFViewer>
