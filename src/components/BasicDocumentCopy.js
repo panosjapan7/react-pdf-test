@@ -411,6 +411,132 @@ import LighthouseImage from "../photos/lighthouse.jpg";
           marginLeft: "0px",
         },
   })
+
+  const stylesFour = StyleSheet.create({
+    page: {
+      backgroundColor: "white",
+      width:"100%",
+      height: "100vh",
+      orientation:"portrait",
+      backgroundSize: "cover",
+      position: "relative",
+    },
+    pageFourMainContainer:{
+      width: "100%",
+      height: "100%",
+      
+      display: "flex",
+      flexDirection: "column",
+      position: "relative",
+      paddingLeft: "40px",
+      paddingRight: "40px",
+      
+      // border: "5px",
+      // borderColor: "red",
+      // borderStyle: "solid",
+      // borderWidth: "3px",
+    },
+      pageFourHorizontalLine: {
+        textAlign: "center",
+        marginTop: "35px",
+
+        width: "500px",
+        borderBottom: "3px",
+        borderBottomColor: "#068466",
+        borderBottomStyle: "solid",
+        borderBottomWidth: "3px",
+      },
+
+      // Text CSS
+      pageFourAgeTextParentContainer: {
+        marginTop: "20px",
+      },
+        pageFourStatistic: {
+          fontSize: "10px",
+          fontFamily: "Times-Bold",
+          letterSpacing: "1px",
+
+          marginBottom: "30px",
+        },
+        pageFourPositionHeadline: {
+          marginBottom: "4px",
+          fontFamily: "Helvetica", 
+          fontSize: "12px",
+        },
+        pageFourText: {
+          fontSize: "12px",
+          fontFamily: "Times-Roman",
+          marginTop: "0px",
+        },
+        pageFourBreakOne: {
+          marginTop: "15px",
+          marginBottom: "15px",
+        },
+        pageFourEmployeeName: {
+          marginBottom: "2px",
+          fontFamily: "Helvetica", 
+          fontSize: "11px",
+        },
+        pageFourBreakTwo: {
+          marginTop: "10px",
+          marginBottom: "10px",
+        },
+        pageAgeRange: {
+          marginBottom: "4px",
+          fontFamily: "Helvetica", 
+          fontSize: "11px",
+          
+          marginTop: "0px",
+        },
+
+      // Chart Test
+      lightGreenChart: {
+        marginTop: "50px",
+        backgroundColor: "rgb(216, 244, 229)",
+        width: "500px",
+        height: "20px",
+      },
+      greenChart: {
+        backgroundColor: "#41aa88",
+        width: "400px",
+        height: "20px",
+        display: "flex",
+        justifyContent: "center",
+      },
+      textChart: {
+        fontSize: "8px",
+        color: "white",
+        textAlign: "right",
+        marginRight: "5px",
+      },
+
+      // Chart CSS
+      pageFourChartContainer: {
+        marginTop: "50px",
+        display: "flex",
+        flexDirection: "row",
+      },
+      pageFourChartTextContainer: {
+        display: "flex",
+        alignItems: "flex-end",
+        marginLeft: "0px",
+        textAlign: "left",
+      },
+        pageFourChartText: {
+          fontFamily: "Helvetica", 
+          fontSize: "7px",
+          marginBottom: "13px",
+        },
+        pageFourChartTextPersonlig: {
+          fontFamily: "Helvetica", 
+          fontSize: "7px",
+          paddingRight: "8px",
+        },
+      pageFourCharts: {
+        marginLeft: "10px",
+      },
+
+  })
   
   // Create Document Component
   function BasicDocument() {
@@ -666,6 +792,132 @@ import LighthouseImage from "../photos/lighthouse.jpg";
               </View>
             </View>
             {/* End of pageThreeMainContainer */}
+          </Page>
+
+          {/*Page Four*/}
+          <Page size="A4" style={stylesFour.page} objectFit="fill">
+
+            {/* pageFourMainContainer */}
+            <View style={stylesFour.pageFourMainContainer}>
+
+              {/* Top Horizontal Line */}
+              <View style={stylesFour.pageFourHorizontalLine}></View>
+              
+
+              {/* Text Block */}
+              <View style={stylesFour.pageFourAgeTextParentContainer}>
+                
+                <Text style={stylesFour.pageFourStatistic}>STATISTIK</Text>
+                
+                {/* CHEF & Text */}
+                <Text style={stylesFour.pageFourPositionHeadline}>CHEF</Text>
+                <Text style={stylesFour.pageFourText}>Här redovisas de Chefer som har fler än 5 svarande.</Text>
+                
+                {/* Adds space between Text elements */}
+                <View style={stylesFour.pageFourBreakOne}></View>
+
+                {/* Employee Name & Text */}
+                <Text style={stylesFour.pageFourEmployeeName}>ANNIKA JOHANSSON</Text>
+                <Text style={stylesFour.pageFourText}>Välmåendeindex ligger på XX.</Text>
+
+                {/* Adds space between Text elements */}
+                <View style={stylesFour.pageFourBreakTwo}></View>
+
+                {/* Paragraph 4 */}
+                <Text style={stylesFour.pageFourText}>XX procent känner sig mycket motiverade och tycker att arbetet är meningsfullt. Det som skulle kunna förbättras är möjligheten att påverka.</Text>
+                
+                {/* Adds space between Text elements */}
+                <View style={stylesFour.pageFourBreakTwo}></View>
+                
+                {/* Paragraph 2 */}
+                <Text style={stylesFour.pageFourText}>XX procent rör på sig tillräckligt mycket för att må bra. X av 10 upplever att de får tillräckligt med rörelse under arbetsdagen. De frågor som sticker ut är; XX, XX samt XX.</Text>
+                
+                {/* Adds space between Text elements */}
+                <View style={stylesFour.pageFourBreakTwo}></View>
+                
+                {/* Paragraph 3 */}
+                <Text style={stylesFour.pageFourText}>XX procent känner en viss stress och det finns indikationer på att medarbetarna upplever att; XX och XX.</Text>
+
+
+              </View>
+              {/* End of Text Block */}
+              
+              {/* Chart Test */}
+              <View style={stylesFour.lightGreenChart}>
+                <View style={stylesFour.greenChart}>
+                  <Text style={stylesFour.textChart}>8.5</Text>
+                </View>
+              </View>
+              {/* End of Chart Test */}
+
+              {/* Chart Block */}
+              <View style={stylesFour.pageFourChartContainer}>
+                
+                {/* Chart Text Block */}
+                <View style={stylesFour.pageFourChartTextContainer}>
+                  <Text style={stylesFour.pageFourChartText}>Stresshantering</Text>
+                  <Text style={stylesFour.pageFourChartText}>Fysisk aktivitet</Text>
+                  <Text style={stylesFour.pageFourChartTextPersonlig}>Personlig utveckling</Text>
+                </View>
+
+                {/* Chart */}
+                <View style={stylesFour.pageFourCharts}>
+                  <Svg viewBox="0 0 0 0">
+                      <Rect
+                        x="0"
+                        y="0"
+                        width="250"
+                        height="10"
+                        fill="#38c976"
+                        fillOpacity="0.2"
+                      />
+                      <Rect
+                        x="0"
+                        y="0"
+                        width={"150"}
+                        height="10"
+                        fill="#41aa88"
+                      />
+                      <Rect
+                        x="0"
+                        y="20"
+                        width="250"
+                        height="10"
+                        fill="#38c976"
+                        fillOpacity="0.2"
+                      />
+                      <Rect
+                        x="0"
+                        y="20"
+                        width={"100"}
+                        height="10"
+                        fill="#41aa88"
+                      />
+                      <Rect
+                        x="0"
+                        y="40"
+                        width="250"
+                        height="10"
+                        fill="#38c976"
+                        fillOpacity="0.2"
+                      />
+                      <Rect
+                        x="0"
+                        y="40"
+                        width={"50"}
+                        height="10"
+                        fill="#41aa88"
+                      />
+                  </Svg>
+                </View>
+
+              </View>
+              {/* End of Chart */}
+              
+
+
+            </View>
+            {/* End of pageFourMainContainer */}
           </Page>
         </Document>
       </PDFViewer>
