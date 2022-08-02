@@ -537,6 +537,202 @@ import LighthouseImage from "../photos/lighthouse.jpg";
       },
 
   })
+
+  const stylesFive = StyleSheet.create({
+    page: {
+      backgroundColor: "white",
+      width:"100%",
+      height: "100vh",
+      orientation:"portrait",
+      backgroundSize: "cover",
+      position: "relative",
+    },
+    pageFiveMainContainer:{
+      width: "100%",
+      height: "100%",
+      
+      display: "flex",
+      flexDirection: "column",
+      position: "relative",
+      paddingLeft: "40px",
+      paddingRight: "40px",
+      
+      // border: "5px",
+      // borderColor: "red",
+      // borderStyle: "solid",
+      // borderWidth: "3px",
+    },
+      pageFiveHorizontalLine: {
+        textAlign: "center",
+        marginTop: "35px",
+
+        width: "500px",
+        borderBottom: "3px",
+        borderBottomColor: "#068466",
+        borderBottomStyle: "solid",
+        borderBottomWidth: "3px",
+      },
+
+      // REKOMMENDATIONER
+      pageFiveRekommendationer: {
+        fontSize: "13px",
+        fontFamily: "Times-Roman",
+        letterSpacing: "1px",
+        marginTop: "20px",
+        marginBottom: "20px",
+      },
+
+      // Columns Parent Container
+      columnsParentContainer: {
+        display: "flex",
+        flexDirection: "row",
+      },
+        // Left Column Container
+        leftColumnContainer: {
+          width: "245px",
+          marginRight: "30px",
+        },
+          // STRATEGISKT
+          strategisktOne: {
+            fontSize: "32px",
+            fontFamily: "Helvetica",
+            letterSpacing: "1px",
+            marginTop: "15px",
+            width: "225px",
+          },
+          strategisktTwo: {
+            fontSize: "32px",
+            fontFamily: "Helvetica",
+            letterSpacing: "1px",
+            marginTop: "5px",
+            marginBottom: "15px",
+            width: "225px",
+          },
+
+          // LEFT PARAGRAPH 1
+          leftParagraphOne: {
+            fontSize: "12px",
+            fontFamily: "Times-Roman",
+            letterSpacing: "0px",
+            lineHeight: "1.2px",
+            marginTop: "10px",
+            marginBottom: "30px",
+          },
+          
+          // LEFT PARAGRAPH TITLE
+          paragraphTitle: {
+            fontFamily: "Helvetica", 
+            fontSize: "13px",
+          },
+
+          // LEFT PARAGRAPH 2
+          leftParagraphTwo: {
+            fontSize: "12px",
+            fontFamily: "Times-Roman",
+            letterSpacing: "0px",
+            lineHeight: "1.2px",
+            marginTop: "2px",
+            marginBottom: "10px",
+            // width: "232px",
+            textAlign: "left",
+          },
+
+          // LEFT PARAGRPAPH 3
+          leftParagraphThree: {
+            fontSize: "12px",
+            fontFamily: "Times-Roman",
+            letterSpacing: "0px",
+            lineHeight: "1.2px",
+            marginTop: "2px",
+            marginBottom: "10px",
+            // width: "232px",
+            textAlign: "left",
+          },
+          // LEFT PARAGRPAPH 4-1
+          leftParagraphFourOne: {
+            fontSize: "12px",
+            fontFamily: "Times-Roman",
+            letterSpacing: "0px",
+            lineHeight: "1.2px",
+            marginTop: "2px",
+            marginBottom: "0px",
+            // width: "232px",
+            textAlign: "left",
+          },
+          // LEFT PARAGRPAPH 4-2
+          leftParagraphFourTwo: {
+            fontSize: "12px",
+            fontFamily: "Times-Roman",
+            letterSpacing: "0px",
+            lineHeight: "1.2px",
+            marginTop: "0px",
+            marginBottom: "10px",
+            // width: "232px",
+            textAlign: "left",
+          },
+          // LEFT PARAGRPAPH 5
+          leftParagraphFive: {
+            fontSize: "12px",
+            fontFamily: "Times-Roman",
+            letterSpacing: "0px",
+            lineHeight: "1.2px",
+            marginTop: "2px",
+            marginBottom: "10px",
+            // width: "232px",
+            textAlign: "left",
+          },
+          
+        // End of Left Column Container
+        
+        // Right Column Container
+        rightColumnContainer: {
+          width: "245px",
+          zIndex: 0,
+        },
+        // RIGHT PARAGRPAPH 1
+        rightParagraphOne: {
+          fontSize: "12px",
+          fontFamily: "Times-Roman",
+          letterSpacing: "0px",
+          lineHeight: "1.2px",
+          marginTop: "2px",
+          marginBottom: "15px",
+          width: "220px",
+          textAlign: "left",
+        },
+        // RIGHT PARAGRPAPH 2
+        rightParagraphTwo: {
+          fontSize: "12px",
+          fontFamily: "Times-Roman",
+          letterSpacing: "0px",
+          lineHeight: "1.2px",
+          marginTop: "2px",
+          marginBottom: "15px",
+          width: "220px",
+          textAlign: "left",
+        },
+
+        // CIRCLE
+        pageFiveCircleContainer: {
+          position: "relative",
+          zIndex: 1,
+        },
+          pageFiveCircleDiv: {
+            backgroundColor: "#068466",
+            width: "200px",
+            height: "200px",
+    
+            borderRadius: "50%",
+            position: "absolute",
+            bottom: -100,
+            right: -100,
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            zIndex: 1,
+          },
+  })
   
   // Create Document Component
   function BasicDocument() {
@@ -843,11 +1039,11 @@ import LighthouseImage from "../photos/lighthouse.jpg";
               {/* End of Text Block */}
               
               {/* Chart Test */}
-              {/* <View style={stylesFour.lightGreenChart}>
+              <View style={stylesFour.lightGreenChart}>
                 <View style={stylesFour.greenChart}>
                   <Text style={stylesFour.textChart}>8.5</Text>
                 </View>
-              </View> */}
+              </View>
               {/* End of Chart Test */}
 
               {/* Chart Block */}
@@ -918,6 +1114,76 @@ import LighthouseImage from "../photos/lighthouse.jpg";
 
             </View>
             {/* End of pageFourMainContainer */}
+          </Page>
+
+          {/*Page Five*/}
+          <Page size="A4" style={stylesFive.page} objectFit="fill">
+
+            {/* pageFiveMainContainer */}
+            <View style={stylesFive.pageFiveMainContainer}>
+
+              {/* Top Horizontal Line */}
+              <View style={stylesFive.pageFiveHorizontalLine}></View>
+
+              <Text style={stylesFive.pageFiveRekommendationer}>REKOMMENDATIONER</Text>
+
+              {/* All Columns Parent Container */}
+              <View style={stylesFive.columnsParentContainer}>
+                
+                {/* Left Column Container */}
+                <View style={stylesFive.leftColumnContainer} >
+
+                  {/* STRATEGISKT */}
+                  <Text style={stylesFive.strategisktOne}>STRATEGIS-</Text>
+                  <Text style={stylesFive.strategisktTwo}>KT</Text>
+
+                  {/* Left Paragraph 1 */}
+                  <Text style={stylesFive.leftParagraphOne}>För att skapa hållbarhet över tid är det avgörande att sätta upp visioner, mål och KPI:er kopplat till välmående. Detta blir viktiga styrmedel framåt för er som ledning.</Text>
+
+                  {/* Left Paragraph 2 */}
+                  <Text style={stylesFive.paragraphTitle}>MÅL</Text>
+                  <Text style={stylesFive.leftParagraphTwo}>Skapa mål som är accepterade, specifika, mätbara och tidsbestämda. Ett rimligt kortsiktigt mål skulle till exempel kunna vara att vid nästa mätning nå ett välmåendeindex på XX. Medan långsiktigt mål skulle kunna vara att ingen medarbetare ska sjukskrivas pga arbetsrelaterad ohälsa.</Text>
+
+                  {/* Left Paragraph 3 */}
+                  <Text style={stylesFive.paragraphTitle}>DELMÅL</Text>
+                  <Text style={stylesFive.leftParagraphThree}>För att nå målen är det värdefullt att sätta upp delmål för att kunna se vart ni är på väg och förstå vad ni behöver göra för att nå dit.</Text>
+
+                  {/* Left Paragraph 4 */}
+                  <Text style={stylesFive.paragraphTitle}>HÄLSOVISION</Text>
+                  <Text style={stylesFive.leftParagraphFourOne}>En tydlig hälsovision skapar gemenskap och riktning, en förankringspunkt på lång sikt som ligger tillgrund för era beslut. Såsom </Text>
+                  <Text style={stylesFive.leftParagraphFourTwo}>"Att skapa de bästa förutsättningarna för våra medarbetare att utvecklas och lyckas". Koppla gärna arbetet till er övergripande hållbarhetsplan, de globala målen och arbetsmiljölagen.</Text>
+
+                  {/* Left Paragraph 5 */}
+                  <Text style={stylesFive.paragraphTitle}>KPI:ER</Text>
+                  <Text style={stylesFive.leftParagraphFive}>Key Performance Indicators är ett mätbart värde som under en avgränsad tidsperiod visar hur effektivt ett företag är på att nå prioriterade mål. Genom att implementera och följa upp KPI:er är det enklare att se om verksamhetens utveckling styrs i önskad riktning och är ett starkt komplement till delmålen. Använder ni KPI:er idag är det viktigt att säkerställa att de går i linje med den hälsovision och mål ni satt upp så att det inte finns motstridigheter. Utvärdera därefter på vilka KPI:er ni skulle kunna implementera för</Text>
+
+                </View>
+                {/* End of Left Column Container */}
+
+                {/* Right Column Container */}
+                <View style={stylesFive.rightColumnContainer} >
+                  
+                  {/* Right Paragraph 1 */}
+                  <Text style={stylesFive.rightParagraphOne}>att driva verksamheten i den riktning som ledningen önskar med avseende på organisatoriskt och individuellt välmående. En anställd som till exempel går från riskgrupp till friskgrupp genom att man exempelvis tränar på arbetstid en gång i veckan är värd ca 500 000 kr under en fyraårsperiod. Det innebär 3-8 gånger pengarna tillbaka tack vare minskad sjukfrånvaro och ökad arbetskapacitet. Forskning visar att personer i riskgrupp har mer än 10 sjukdagar/år. Exempel på värdefulla KPI:er skulle kunna vara Sjukfrånvaro, Personalomsättning samt Rapporterad tid på personlig utveckling.</Text>
+                  
+                  {/* Right Paragraph 2 */}
+                  <Text style={stylesFive.paragraphTitle}>STYRNING</Text>
+                  <Text style={stylesFive.rightParagraphTwo}>Det är otroligt viktigt att fokus på hälsa och välmående kommer från toppen och integreras i ledningens vanliga arbetssätt. I och med att en god arbetsmiljö är associerad till högre prestation hos de anställda, samt ökar möjligheterna att attrahera de bästa medarbetarna, är frågan om hälsa och välmående viktig för produktivitet, tillväxt och lönsamhet på sikt. Studier visar ett otroligt starkt samband på ledningens förmåga att kommunicera ut vision, mål och delmål till sina medarbetare. Dessa organisationer har 18 procentenheter högre lönsamhet jämfört med företag där detta inte inte fungerar. Dessutom har företag som lyckas arbeta strategiskt och förebyggande med dessa frågor fem gånger högre vinstmarginal än de som vidtar åtgärder först när ohälsan är ett faktum. Ofta kopplas kostnader för ohälsa till sjukskrivningar men även om det är en stor kostnad är den absolut största kostnaden är inte sjukfrånvaro. Det är sjuknärvaron, det vill säga när människor är i arbete men mår dåligt och därför inte orkar prestera fullt ut, som står för den största utgiftsposten. Baserat på era resultat har ni idag är det XX procent som levererar på sin fulla kapacitet, här finns en enorm potential för er att ta tillvara på för framtidens framgångar.</Text>
+                </View>
+                {/* End of Left Column Container */}
+
+
+                {/* CIRCLE */}
+                <View style={stylesFive.pageFiveCircleContainer}>
+                  <View style={stylesFive.pageFiveCircleDiv}>
+                  </View>
+                </View>  
+
+              </View>
+              {/* End of All Columns Parent Container */}
+
+            </View>
+            {/* End of pageFiveMainContainer */}
           </Page>
         </Document>
       </PDFViewer>
